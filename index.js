@@ -1,41 +1,39 @@
 const  tagBody  = document.querySelector("body")
-const   para  =   document.createElement("p")
-const para2 = document.createElement("p")
+const  para  =   document.createElement("p")
+const  para2 = document.createElement("p")
 const  tagMain   = document.createElement("Main")
-const h2= document.createElement("h2")
-const  tagUl   = document.createElement("ul")
-const  tagLi  = document.createElement("li")
-const tagLi2 = document.createElement("li")
-const  tagLi3  = document.createElement("li")
-const tagLi4 = document.createElement("li")
-const  tagLi5  = document.createElement("li")
-const tagLi6 = document.createElement("li")
-const  tagLi7  = document.createElement("li")
-const tagLi8 = document.createElement("li")
-const  tagLi9  = document.createElement("li")
-const tagLi10 = document.createElement("li")
+const  h2= document.createElement("h2")
+const  tagUlProductList   = document.createElement("ul")
+const  tagLiProductItem  = document.createElement("li")
+const  tagLi2ProductItem = document.createElement("li")
+const  tagLi3ProductItem  = document.createElement("li")
+const  tagLi4ProductItem = document.createElement("li")
+const  tagLi5ProductItem  = document.createElement("li")
+const  tagLi6ProductItem = document.createElement("li")
+const  tagLi7ProductItem  = document.createElement("li")
+const  tagLi8ProductItem = document.createElement("li")
+const  tagLi9ProductItem  = document.createElement("li")
+const  tagLi10ProductItem = document.createElement("li")
 const  button = document.createElement("button")
-const tagSection = document.createElement("section")
-
-
+const  tagSectionProductDetails = document.createElement("section")
 
 tagBody.appendChild(tagMain)
 tagMain.appendChild(h2)
-tagMain.appendChild(tagUl)
-tagUl.appendChild(tagLi)
-tagUl.appendChild(tagLi2)
-tagUl.appendChild(tagLi3)
-tagUl.appendChild(tagLi4)
-tagUl.appendChild(tagLi5)
-tagUl.appendChild(tagLi6)
-tagUl.appendChild(tagLi7)
-tagUl.appendChild(tagLi8)
-tagUl.appendChild(tagLi9)
-tagUl.appendChild(tagLi10)
-tagSection.appendChild(para)
-tagSection.appendChild(para2)
-tagSection.appendChild(button)
-tagMain.appendChild(tagSection)
+tagMain.appendChild(tagUlProductList)
+tagUlProductList.appendChild(tagLiProductItem)
+tagUlProductList.appendChild(tagLi2ProductItem)
+tagUlProductList.appendChild(tagLi3ProductItem)
+tagUlProductList.appendChild(tagLi4ProductItem)
+tagUlProductList.appendChild(tagLi5ProductItem)
+tagUlProductList.appendChild(tagLi6ProductItem)
+tagUlProductList.appendChild(tagLi7ProductItem)
+tagUlProductList.appendChild(tagLi8ProductItem)
+tagUlProductList.appendChild(tagLi9ProductItem)
+tagUlProductList.appendChild(tagLi10ProductItem)
+tagSectionProductDetails.appendChild(para)
+tagSectionProductDetails.appendChild(para2)
+tagSectionProductDetails.appendChild(button)
+tagMain.appendChild(tagSectionProductDetails)
 
 
 
@@ -77,13 +75,14 @@ const productsCart = [
 ]
 
 let soma = 0
-function somaPreco(price) {
+function somaPreco() {
     for(let i = 0; i < productsCart.length; i++){ 
     soma = soma + productsCart[i].price;
    
 }
-return soma
+return soma.toFixed(2)
 }
+
 let nome = productsCart[0].name
 let preco = productsCart[0].price
 let nome2 = productsCart[1].name
@@ -97,16 +96,16 @@ let preco5 = productsCart[4].price
 
 
 h2.innerHTML = "Depósito de Bebidas"
-tagLi.innerHTML = `${nome}`
-tagLi2.innerHTML = `${preco}`
-tagLi3.innerHTML = `${nome2}`
-tagLi4.innerHTML = `${preco2}`
-tagLi5.innerHTML = `${nome3}`
-tagLi6.innerHTML = `${preco3}`
-tagLi7.innerHTML = `${nome4}`
-tagLi8.innerHTML = `${preco4}`
-tagLi9.innerHTML = `${nome5}`
-tagLi10.innerHTML = `${preco5}`
+tagLiProductItem.innerHTML = `${nome}`
+tagLi2ProductItem.innerHTML = `${preco}`
+tagLi3ProductItem.innerHTML = `${nome2}`
+tagLi4ProductItem.innerHTML = `${preco2}`
+tagLi5ProductItem.innerHTML = `${nome3}`
+tagLi6ProductItem.innerHTML = `${preco3}`
+tagLi7ProductItem.innerHTML = `${nome4}`
+tagLi8ProductItem.innerHTML = `${preco4}`
+tagLi9ProductItem.innerHTML = `${nome5}`
+tagLi10ProductItem.innerHTML = `${preco5}`
 
 
 button.innerHTML = "Finalizar compra"
@@ -114,11 +113,10 @@ button.innerHTML = "Finalizar compra"
 
 para.innerText = "Valor total"
 
- button.addEventListener('click', apertar);
 
- function apertar() {
-   //button.value == somaPreco(productsCart)
-     para2.textContent = somaPreco(productsCart)/2;
+button.addEventListener('click', apertar);
+function apertar() {
+para2.textContent = somaPreco(productsCart)/2;
  }
 
 console.log(somaPreco(productsCart))
