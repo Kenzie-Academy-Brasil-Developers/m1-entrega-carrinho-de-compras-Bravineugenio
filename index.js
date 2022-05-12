@@ -1,4 +1,6 @@
 
+
+const para  =   document.createElement("p")
 const  tagMain   = document.createElement("Main")
 const  tagBody  = document.createElement("Body")
 const  tagUl   = document.createElement("ul")
@@ -6,10 +8,12 @@ const  tagLi  = document.createElement("li")
 const  button = document.createElement("button")
 const tagSection = document.createElement("section")
 
-tagMain.appendChild(tagBody)
-tagUl.appendChild(tagBody)
-tagLi.appendChild(tagUl)
-button.appendChild(tagSection)
+tagBody.appendChild(tagMain)
+tagMain.appendChild(tagUl)
+tagUl.appendChild(tagLi)
+tagSection.appendChild(para)
+tagSection.appendChild(button)
+tagMain.appendChild(tagSection)
 
 
 const productsCart = [
@@ -55,4 +59,6 @@ function somaPreco(price) {
 return soma
 }
 
-console.log(tagMain)
+console.log(tagBody)
+
+
