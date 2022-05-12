@@ -1,4 +1,4 @@
-.ProductItem1{
+li{
     max-width: 1200px;
     width: 500px;
     margin: 0 auto; /* Centralizando o conteúdo*/
@@ -15,7 +15,7 @@
 
 }
 
-.ProductItem2{
+p{
     max-width: 1200px;
     margin: 0 auto; /* Centralizando o conteúdo*/
     font-family: 'Lato', sans-serif;
@@ -33,20 +33,11 @@
 
 }
 
-.ProductItem3{
-    max-width: 1200px;
-    margin: 0 auto; /* Centralizando o conteúdo*/
-    font-family: 'Lato', sans-serif;
+button{
     display: flex;
     justify-content: center;
     align-content: center;
-    background:linear-gradient(to bottom, #afe4bc 5%, #408c99 100%);
-	background-color:#ceddd2;
-	border-radius:8px;
-    margin-top: 10px;
-    width: 500px;
-    border-style:double;
-    height: 35px;
+    
     
 
 }
@@ -124,7 +115,7 @@
 }
 
 
-.Titulo{
+h2{
     text-align: center;
     color: white;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -133,25 +124,10 @@
 
 }
 
-.Total{
-    max-width: 1200px;
-    margin: 0 auto; /* Centralizando o conteúdo*/
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background:linear-gradient(to bottom, #afe4bc 5%, #408c99 100%);
-	background-color:#ceddd2;
-	border-radius:8px;
-    margin-top: 10px;
-    width: 500px;
-    border-style:double;
-    height: 35px;
 
 
-}
 
-.myButton {
+Button {
 	box-shadow: 0px 10px 14px -7px #276873;
 	background:linear-gradient(to bottom, #59b36e 5%, #408c99 100%);
 	background-color:#59b36e;
@@ -167,11 +143,11 @@
     display: flex;
     justify-content: center;
 }
-.myButton:hover {
+Button:hover {
 	background:linear-gradient(to bottom, #408c99 5%, #59b36e 100%);
 	background-color:#408c99;
 }
-.myButton:active {
+Button:active {
 	position:relative;
 	top:1px;
 }
